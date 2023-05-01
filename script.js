@@ -44,7 +44,7 @@ function init() {
   window.addEventListener("resize", onWindowResize);
 }
 
-const geometry = new THREE.PlaneGeometry(5, 3, 15, 9);
+const geometry = new THREE.PlaneGeometry(5, 3, 50, 30);
 const material = new THREE.MeshBasicMaterial({
   color: 0xff0000,
   side: THREE.DoubleSide,
@@ -53,6 +53,7 @@ const material = new THREE.MeshBasicMaterial({
 var plane = new THREE.Mesh(geometry, material);
 scene.add(plane);
 plane.position.z = 5;
+plane.rotation.x = -0.1;
 
 function onWindowResize() {
   windowHalfX = window.innerWidth / 2;
@@ -69,39 +70,25 @@ function onDocumentMouseMove(event) {
   mouseY = (event.clientY - windowHalfY) / 5;
 }
 
-let count;
-count = geometry.attributes.position.count;
-let mouve1, mouve2, x
 function animate() {
-  t += 0.05;
+  // t += 0.05;
   if (plane) {
-    // plane.geometry.vertices.forEach( v => {
-    //     const mouve1 = 0.5 * Math.sin(v.x * 2 + t);
-    //     const mouve2 = 0.25 * Math.sin(v.x * 3 + t + 2);
-    //     const mouve3 = 0.5 * Math.sin(v.y * 5 + t + 0.5);
-    //     v.z = mouve1 + mouve2 + mouve3;
-    // })
-    for (let i = 0; i < count; i++) {
-         x = parseFloat(geometry.attributes.position.getX(i));
-    //   const y = geometry.attributes.position.getX(i);
+    var t = Date.now() * 0.006;
 
-      // const mouve1 = 0.5 * Math.sin(x * 2 + t);
-      // const mouve2 = 0.5 * Math.sin(x * 2 + t);
-      // geometry.attributes.position.setZ(i, mouve1)
-      // Vérifier si les coordonnées sont valides
-        // x = parseFloat(x);
-        // y = parseFloat(y);
+    for (var i = 0; i < geometry.attributes.position.array.length; i += 3) {
+      const mouve1 =
+        0.5 * Math.sin(geometry.attributes.position.array[i] * 2 + t);
+      const mouve2 =
+        0.25 * Math.sin(geometry.attributes.position.array[i + 1] * 3 + t + 2);
+      const mouve3 =
+        0.5 * Math.sin(geometry.attributes.position.array[i + 2] * 5 + t + 0.5);
 
-      // Vérifier à nouveau si les coordonnées sont valides après la conversion
-         mouve1 = 0.5 * Math.sin(x * 2 + t);
-        //  mouve2 = 0.5 * Math.sin(y * 2 + t);
-
-        geometry.attributes.position.setZ(i, mouve1);
-
-      geometry.computeVertexNormals();
-      geometry.attributes.position.needsUpdate = true;
-      geometry.computeBoundingSphere();
+      geometry.attributes.position.array[i + 2] = (i, mouve1 + mouve2);
     }
+
+    geometry.attributes.position.needsUpdate = true;
+    geometry.computeVertexNormals();
+    geometry.verticesNeedUpdate = true;
   }
   requestAnimationFrame(animate);
   render();
