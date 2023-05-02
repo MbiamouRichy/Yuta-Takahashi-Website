@@ -40,20 +40,17 @@ function init() {
 
   container.appendChild(renderer.domElement);
 
-  document.addEventListener("mousemove", onDocumentMouseMove);
   window.addEventListener("resize", onWindowResize);
 }
-
+var loader = new THREE.TextureLoader()
 const geometry = new THREE.PlaneGeometry(5, 3, 50, 30);
 const material = new THREE.MeshBasicMaterial({
-  color: 0xff0000,
-  side: THREE.DoubleSide,
-  wireframe: true,
+  map: loader.load("./assets/cameroun.png")
 });
 var plane = new THREE.Mesh(geometry, material);
 scene.add(plane);
 plane.position.z = 5;
-plane.rotation.x = -0.1;
+plane.rotation.x = -0.2;
 
 function onWindowResize() {
   windowHalfX = window.innerWidth / 2;
@@ -65,23 +62,15 @@ function onWindowResize() {
   renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
 }
 
-function onDocumentMouseMove(event) {
-  mouseX = (event.clientX - windowHalfX) / 5;
-  mouseY = (event.clientY - windowHalfY) / 5;
-}
-
 function animate() {
-  // t += 0.05;
   if (plane) {
-    var t = Date.now() * 0.006;
+    var t = Date.now() * 0.003;
 
     for (var i = 0; i < geometry.attributes.position.array.length; i += 3) {
       const mouve1 =
         0.5 * Math.sin(geometry.attributes.position.array[i] * 2 + t);
       const mouve2 =
         0.25 * Math.sin(geometry.attributes.position.array[i + 1] * 3 + t + 2);
-      const mouve3 =
-        0.5 * Math.sin(geometry.attributes.position.array[i + 2] * 5 + t + 0.5);
 
       geometry.attributes.position.array[i + 2] = (i, mouve1 + mouve2);
     }
@@ -89,6 +78,9 @@ function animate() {
     geometry.attributes.position.needsUpdate = true;
     geometry.computeVertexNormals();
     geometry.verticesNeedUpdate = true;
+  }
+  if(camera) {
+    if(document.body.offsetWidth)
   }
   requestAnimationFrame(animate);
   render();
