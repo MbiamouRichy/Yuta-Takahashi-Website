@@ -516,7 +516,17 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.bg-gray-600 {
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.bg-cyan-950 {
   --tw-bg-opacity: 1;
-  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+  background-color: rgb(8 51 68 / var(--tw-bg-opacity));
+}
+
+/* Style personnalise */
+
+body{
+  background: url('../assets/arriereplan.png') repeat center;
 }
