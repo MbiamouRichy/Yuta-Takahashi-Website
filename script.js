@@ -45,8 +45,6 @@ const material = new THREE.MeshBasicMaterial({
 });
 var plane = new THREE.Mesh(geometry, material);
 scene.add(plane);
-plane.position.z = 5;
-plane.rotation.set(-0.3, 0, 0);
 
 function onWindowResize() {
   windowHalfX = window.innerWidth;
@@ -60,6 +58,13 @@ function onWindowResize() {
 
 function animate() {
   if (plane) {
+    // Adaptation de l'objet en fonction de l'ecran
+    if (document.body.offsetWidth < 720) {
+      plane.rotation.set(-0.3, 0, 1.5);
+    }else{
+      plane.rotation.set(-0.3, 0, 0);
+    }
+  
     var t = Date.now() * 0.006;
 
     for (var i = 0; i < geometry.attributes.position.array.length; i += 3) {
@@ -70,6 +75,7 @@ function animate() {
       const fixed1 = (geometry.attributes.position.array[i] - 2.5) / 5
       const fixed2 = (geometry.attributes.position.array[i] + 2.5) / 5
       geometry.attributes.position.array[i + 2] = (mouve1 + mouve3) * fixed1 * fixed2;
+
     }
 
     geometry.attributes.position.needsUpdate = true;
@@ -77,10 +83,8 @@ function animate() {
     geometry.verticesNeedUpdate = true;
   }
   if(camera) {
-    if (document.body.offsetWidth < 720 && document.body.offsetWidth > 400) {
-      camera.position.set(0, 0, 25);
-    } else if (document.body.offsetWidth < 400) {
-      camera.position.set(0, 0, 30);
+    if (document.body.offsetWidth < 500) {
+      camera.position.set(0, 0, 20);
     }else{
       camera.position.set(0, 0, 15);
     }
