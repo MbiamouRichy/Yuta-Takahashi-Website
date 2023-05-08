@@ -43,11 +43,13 @@ body{
     background-color: var(--color2);
 }
 .slide{
-    @apply w-full flex flex-col items-center justify-center md:items-start md:gap-3;
+    @apply w-full flex flex-col items-center justify-between md:items-start md:gap-3;
 }
 #btn-left, #btn-right{
     box-shadow: 0 0 8px var(--color2);
 }
+
+
 /* le compteur de slide */
 .compteur{
     color: var(--color2);
@@ -70,7 +72,6 @@ body{
 /* lien copyright */
 .lien-copyright::before{
   background-color: var(--color2);
-  transform-origin: center;
 }
 /* Pied de page */
 
@@ -79,8 +80,9 @@ body{
     background-color: var(--color2);
     color: var(--color1);
     font-size: 12px;
-    @apply sm:text-sm md:text-lg
+    @apply sm:text-sm md:text-lg;
 }
+
 /* trait vertical du pied de page */
 .trait{
     @apply w-10 rotate-90;
@@ -89,7 +91,7 @@ body{
 }
 /* boutton view website */
 .pied-page button{
-    @apply py-1 px-2 md:py-3 md:px-5 flex flex-row items-center justify-center border rounded-3xl md:rounded-full gap-2;
+    @apply py-1 px-2 xl:py-3 md:px-5 flex flex-row items-center justify-center border rounded-3xl md:rounded-full gap-2;
     border-color: var(--color1);
 }
 .pied-page button svg{
@@ -97,4 +99,20 @@ body{
 }
 .pied-page button svg .change{
     fill: var(--color1);
+}
+/* Animate */
+.animate{
+    animation: translatex 2s linear infinite;
+}
+
+@keyframes translatex {
+    0%{
+        transform: translateX(-55px);
+    }
+    50%{
+        transform: translateX(-50px);
+    }
+    100%{
+        transform: translate(80px);
+    }
 }

@@ -524,12 +524,28 @@ video {
   position: relative;
 }
 
-.-right-32 {
-  right: -8rem;
+.-left-4 {
+  left: -1rem;
+}
+
+.-right-28 {
+  right: -7rem;
+}
+
+.bottom-1\/4 {
+  bottom: 25%;
+}
+
+.bottom-14 {
+  bottom: 3.5rem;
 }
 
 .left-0 {
   left: 0px;
+}
+
+.left-10 {
+  left: 2.5rem;
 }
 
 .top-0 {
@@ -568,8 +584,16 @@ video {
   height: 0.125rem;
 }
 
+.h-1\/2 {
+  height: 50%;
+}
+
 .h-10 {
   height: 2.5rem;
+}
+
+.h-7 {
+  height: 1.75rem;
 }
 
 .h-8 {
@@ -592,8 +616,20 @@ video {
   width: 83.333333%;
 }
 
+.w-2\/3 {
+  width: 66.666667%;
+}
+
+.w-20 {
+  width: 5rem;
+}
+
 .w-24 {
   width: 6rem;
+}
+
+.w-7 {
+  width: 1.75rem;
 }
 
 .w-8 {
@@ -641,12 +677,20 @@ video {
   justify-content: space-between;
 }
 
+.justify-around {
+  justify-content: space-around;
+}
+
 .gap-1 {
   gap: 0.25rem;
 }
 
 .gap-5 {
   gap: 1.25rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .self-end {
@@ -659,6 +703,11 @@ video {
 
 .rounded-rond {
   border-radius: 50%;
+}
+
+.bg-gray-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -688,9 +737,19 @@ video {
   line-height: 1.5rem;
 }
 
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .font-bold {
@@ -701,12 +760,12 @@ video {
   font-weight: 300;
 }
 
-.font-semibold {
-  font-weight: 600;
-}
-
 .font-normal {
   font-weight: 400;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .opacity-50 {
@@ -725,6 +784,10 @@ video {
 
 .duration-300 {
   transition-duration: 300ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
 }
 
 /* Style personnalise */
@@ -778,7 +841,7 @@ body{
   width: 100%;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 @media (min-width: 768px) {
@@ -836,7 +899,6 @@ body{
 
 .lien-copyright::before{
   background-color: var(--color2);
-  transform-origin: center;
 }
 
 /* Pied de page */
@@ -862,7 +924,7 @@ body{
 .pied-page{
   background-color: var(--color2);
   color: var(--color1);
-  font-size: 12px
+  font-size: 12px;
 }
 
 @media (min-width: 640px) {
@@ -908,10 +970,15 @@ body{
 @media (min-width: 768px) {
   .pied-page button {
     border-radius: 9999px;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .pied-page button {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
 }
 
@@ -933,6 +1000,26 @@ body{
 
 .pied-page button svg .change{
   fill: var(--color1);
+}
+
+/* Animate */
+
+.animate{
+  animation: translatex 2s linear infinite;
+}
+
+@keyframes translatex {
+  0%{
+    transform: translateX(-55px);
+  }
+
+  50%{
+    transform: translateX(-50px);
+  }
+
+  100%{
+    transform: translate(80px);
+  }
 }
 
 .before\:absolute::before {
@@ -1022,11 +1109,24 @@ body{
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:leading-8 {
+    line-height: 2rem;
+  }
 }
 
 @media (min-width: 1024px) {
   .lg\:block {
     display: block;
+  }
+
+  .lg\:flex {
+    display: flex;
   }
 
   .lg\:w-5\/12 {
@@ -1048,8 +1148,17 @@ body{
 }
 
 @media (min-width: 1280px) {
+  .xl\:-right-32 {
+    right: -8rem;
+  }
+
   .xl\:text-9xl {
     font-size: 8rem;
     line-height: 1;
+  }
+
+  .xl\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
