@@ -43,8 +43,30 @@ body{
     background-color: var(--color2);
 }
 .slide{
-    @apply w-full flex flex-col items-center justify-center;
+    @apply w-full flex flex-col items-center justify-center md:items-start md:gap-3;
 }
+#btn-left, #btn-right{
+    box-shadow: 0 0 8px var(--color2);
+}
+/* le compteur de slide */
+.compteur{
+    color: var(--color2);
+    @apply absolute bottom-8 left-1/2 flex-row items-center hidden lg:flex;
+}
+.compteur p{
+    @apply text-lg;
+}
+.compteur p:first-of-type{
+    @apply mb-5 -mr-3;
+}
+.compteur p:last-of-type{
+    @apply mt-5 -ml-3;
+}
+.compteur hr{
+    @apply w-8 h-0.5;
+    transform: rotate(-70deg);
+}
+
 /* Pied de page */
 
 .pied-page{

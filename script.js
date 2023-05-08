@@ -64,7 +64,9 @@ function animate() {
     }else{
       plane.rotation.set(-0.3, 0, 0);
     }
-  
+    if (document.body.offsetWidth > 1024) {
+      plane.position.x = 1;
+    }
     var t = Date.now() * 0.006;
 
     for (var i = 0; i < geometry.attributes.position.array.length; i += 3) {
