@@ -10,7 +10,7 @@ let titles = document.querySelectorAll('#titles')
 titles.forEach(title =>{
     title.innerHTML = title.innerText
     .split('')
-    .map((letter, idx) => `<span style="transition-delay: ${idx * 50}ms">${letter}</span>`)
+    .map((letter, idx) => `<span style="animation-delay: ${idx * 50}ms">${letter}</span>`)
     .join('')
 })
 

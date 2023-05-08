@@ -851,9 +851,26 @@ body{
   }
 }
 
-.titles span {
+#titles span {
   display: inline-block;
   transition: all 0.5s cubic-bezier(0.68, -0.7, 0.7, 1);
+  animation: translatey 0.5s ease-in-out forwards;
+}
+
+.animate-y{
+  animation: translatey 0.5s ease-in-out forwards;
+  visibility: visible;
+}
+
+@keyframes translatey {
+  from{
+    visibility: hidden;
+    transform: translateY(80px);
+  }
+
+  to{
+    transform: translateY(0);
+  }
 }
 
 /* boutton pour la navigation du slider */
@@ -1028,7 +1045,7 @@ body{
 /* Animate */
 
 .animate{
-  animation: translatex 2s linear infinite;
+  animation: translatex 2s ease-in-out infinite;
 }
 
 @keyframes translatex {
