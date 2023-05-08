@@ -3,6 +3,24 @@ let container, camera, scene, renderer;
 
 let windowHalfX = window.innerWidth;
 let windowHalfY = window.innerHeight;
+const mode = document.querySelector('.div-mode')
+
+// Dark mode / Light mode
+mode.addEventListener('click', (e) =>{
+  const html= document.querySelector('html')
+  const img = document.querySelector('.div-mode img');
+  let attr = "./assets/moon.svg"
+  console.log(img);
+  if(html.classList.contains('dark')){
+      html.classList.remove('dark')
+      attr = "./assets/moon.svg"
+      img.setAttribute('src', attr)
+  }else{
+      html.classList.add('dark')
+      attr = "./assets/sun.svg"
+      img.setAttribute('src', attr)
+  }
+})
 
 /*-------------- Genere ma scene threejs --------------------*/
 
