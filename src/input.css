@@ -31,7 +31,7 @@ body{
 
 .div-mode{
   background-color: var(--color2);
-  @apply rounded-rond p-1;
+  @apply rounded-rond p-1 cursor-pointer;
 }
 .div-mode:hover{
     box-shadow: 0 0 8px var(--color2);
@@ -51,10 +51,10 @@ body{
 /* le compteur de slide */
 .compteur{
     color: var(--color2);
-    @apply absolute bottom-8 left-1/2 flex-row items-center hidden lg:flex;
+    @apply absolute bottom-14 left-1/2 flex-row items-center hidden lg:flex;
 }
 .compteur p{
-    @apply text-lg;
+    @apply text-lg font-light;
 }
 .compteur p:first-of-type{
     @apply mb-5 -mr-3;
@@ -67,6 +67,11 @@ body{
     transform: rotate(-70deg);
 }
 
+/* lien copyright */
+.lien-copyright::before{
+  background-color: var(--color2);
+  transform-origin: center;
+}
 /* Pied de page */
 
 .pied-page{
