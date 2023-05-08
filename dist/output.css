@@ -528,12 +528,24 @@ video {
   top: 0px;
 }
 
+.top-1\/2 {
+  top: 50%;
+}
+
 .-z-50 {
   z-index: -50;
 }
 
 .flex {
   display: flex;
+}
+
+.h-0 {
+  height: 0px;
+}
+
+.h-0\.5 {
+  height: 0.125rem;
 }
 
 .h-8 {
@@ -600,8 +612,17 @@ video {
   padding: 1.25rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .font-sans {
   font-family: "Lexend Deca", sans-serif;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-base {
@@ -617,6 +638,16 @@ video {
 .font-bold {
   font-weight: 700;
 }
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.mix-blend-difference {
+  mix-blend-mode: difference;
+}
+
+/* Style personnalise */
 
 :root{
   --color1: #fff;
@@ -637,11 +668,13 @@ body{
   color: var(--color2);
 }
 
-/* Style personnalise */
+/* ligne du background */
 
 .svg-fill, .svg-fill path{
   fill: var(--color2);
 }
+
+/* Button light mode / dark mode */
 
 .div-mode{
   background-color: var(--color2);
@@ -652,6 +685,22 @@ body{
 .div-mode:hover{
   box-shadow: 0 0 8px var(--color2);
 }
+
+/* slider */
+
+.slider-hr{
+  background-color: var(--color2);
+}
+
+.slide {
+  display: flex;
+  width: 83.333333%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Pied de page */
 
 .pied-page {
   position: absolute;
@@ -691,6 +740,8 @@ body{
   }
 }
 
+/* trait vertical du pied de page */
+
 .trait {
   width: 2.5rem;
   --tw-rotate: 90deg;
@@ -698,6 +749,8 @@ body{
   height: 1px;
   background-color: var(--color1);
 }
+
+/* boutton view website */
 
 .pied-page button {
   display: flex;
@@ -754,6 +807,11 @@ body{
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
   }
 
   .md\:text-lg {

@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* Style personnalise */
+
 :root{
     --color1: #fff;
     --color2: #111;
@@ -17,10 +20,14 @@ html.dark{
 body{
     color: var(--color2);
 }
-/* Style personnalise */
+
+/* ligne du background */
+
 .svg-fill, .svg-fill path{
     fill: var(--color2);
 }
+
+/* Button light mode / dark mode */
 
 .div-mode{
   background-color: var(--color2);
@@ -29,6 +36,17 @@ body{
 .div-mode:hover{
     box-shadow: 0 0 8px var(--color2);
 }
+
+/* slider */
+
+.slider-hr{
+    background-color: var(--color2);
+}
+.slide{
+    @apply w-10/12 flex flex-col items-center justify-center;
+}
+/* Pied de page */
+
 .pied-page{
     @apply absolute bottom-0 right-0 flex flex-row items-center justify-between p-3 md:p-5 rounded-tl-lg;
     background-color: var(--color2);
@@ -36,11 +54,13 @@ body{
     font-size: 12px;
     @apply sm:text-sm md:text-lg
 }
+/* trait vertical du pied de page */
 .trait{
     @apply w-10 rotate-90;
     height: 1px;
     background-color: var(--color1);
 }
+/* boutton view website */
 .pied-page button{
     @apply py-1 px-2 md:py-3 md:px-5 flex flex-row items-center justify-center border rounded-3xl md:rounded-full gap-2;
     border-color: var(--color1);
