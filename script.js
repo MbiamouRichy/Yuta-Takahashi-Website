@@ -38,7 +38,7 @@ function init() {
   window.addEventListener("resize", onWindowResize);
 }
 var loader = new THREE.TextureLoader()
-const geometry = new THREE.PlaneGeometry(5, 3, 50, 30);
+let geometry = new THREE.PlaneGeometry(5, 3, 50, 30);
 const material = new THREE.MeshBasicMaterial({
   wireframe: true,
   map: loader.load("./assets/cameroun.png")

@@ -2,7 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Style personnalise */
+:root{
+    --color1: #fff;
+    --color2: #111;
+}
+html{
+    transition: all 0.5s ease-in-out;
+}
+html.dark{
+    --color1: #111;
+    --color2: #fff;
+    background-color: var(--color1);
+}
 body{
-    background: url('../assets/arriereplan.png') repeat center;
+    color: var(--color2);
+}
+/* Style personnalise */
+.svg-fill, .svg-fill path{
+    fill: var(--color2);
+}
+
+.div-mode{
+  background-color: var(--color2);
+  @apply rounded-rond p-1;
+}
+.div-mode:hover{
+    box-shadow: 0 0 8px var(--color2);
+}
+.pied-page{
+    @apply absolute bottom-0 right-0 flex flex-row items-center justify-between p-3 md:p-5 rounded-tl-lg;
+    background-color: var(--color2);
+    color: var(--color1);
+    font-size: 12px;
+    @apply sm:text-sm md:text-lg
+}
+.trait{
+    @apply w-10 rotate-90;
+    height: 1px;
+    background-color: var(--color1);
+}
+.pied-page button{
+    @apply py-1 px-2 md:py-3 md:px-5 flex flex-row items-center justify-center border rounded-3xl md:rounded-full gap-2;
+    border-color: var(--color1);
+}
+.pied-page button svg{
+    @apply w-3 h-3 md:w-5 md:h-5;
+}
+.pied-page button svg .change{
+    fill: var(--color1);
 }

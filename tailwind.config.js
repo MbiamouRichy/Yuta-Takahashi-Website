@@ -4,7 +4,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Lexend Deca', sans-serif],
+        sans: ['"Lexend Deca", sans-serif'],
+      },
+      borderRadius: {
+        rond: ["50%"]
       }
     },
   },
