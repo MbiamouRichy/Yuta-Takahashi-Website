@@ -685,12 +685,12 @@ video {
   gap: 0.25rem;
 }
 
-.gap-5 {
-  gap: 1.25rem;
-}
-
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .self-end {
@@ -851,8 +851,30 @@ body{
   }
 }
 
+.titles span {
+  display: inline-block;
+  transition: all 0.5s cubic-bezier(0.68, -0.7, 0.7, 1);
+}
+
+/* boutton pour la navigation du slider */
+
 #btn-left, #btn-right{
   box-shadow: 0 0 8px var(--color2);
+  background-color: var(--color1);
+  overflow: hidden;
+}
+
+#btn-left::before,#btn-right::before{
+  background-color: var(--color2);
+}
+
+.nav-slide line{
+  stroke: var(--color2);
+  transition: all 0.3s ease-in-out;
+}
+
+#btn-left:hover .nav-slide line, #btn-right:hover .nav-slide line{
+  stroke: var(--color1);
 }
 
 /* le compteur de slide */
@@ -893,6 +915,7 @@ body{
   height: 0.125rem;
   width: 2rem;
   transform: rotate(-70deg);
+  background-color: var(--color2);
 }
 
 /* lien copyright */
@@ -953,7 +976,7 @@ body{
 
 /* boutton view website */
 
-.pied-page button {
+.view-website {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -968,7 +991,7 @@ body{
 }
 
 @media (min-width: 768px) {
-  .pied-page button {
+  .view-website {
     border-radius: 9999px;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -976,30 +999,30 @@ body{
 }
 
 @media (min-width: 1280px) {
-  .pied-page button {
+  .view-website {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
   }
 }
 
-.pied-page button{
+.view-website{
   border-color: var(--color1);
 }
 
-.pied-page button svg {
+.view-website svg {
   height: 0.75rem;
   width: 0.75rem;
 }
 
 @media (min-width: 768px) {
-  .pied-page button svg {
+  .view-website svg {
     height: 1.25rem;
     width: 1.25rem;
   }
 }
 
-.pied-page button svg .change{
-  fill: var(--color1);
+.view-website svg line{
+  stroke: var(--color1);
 }
 
 /* Animate */
@@ -1037,6 +1060,11 @@ body{
   left: 0px;
 }
 
+.before\:-z-10::before {
+  content: var(--tw-content);
+  z-index: -10;
+}
+
 .before\:h-0::before {
   content: var(--tw-content);
   height: 0px;
@@ -1047,9 +1075,19 @@ body{
   height: 0.125rem;
 }
 
+.before\:h-full::before {
+  content: var(--tw-content);
+  height: 100%;
+}
+
 .before\:w-0::before {
   content: var(--tw-content);
   width: 0px;
+}
+
+.before\:rounded-rond::before {
+  content: var(--tw-content);
+  border-radius: 50%;
 }
 
 .before\:transition-all::before {

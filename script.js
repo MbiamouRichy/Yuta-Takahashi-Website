@@ -4,13 +4,21 @@ let container, camera, scene, renderer;
 let windowHalfX = window.innerWidth;
 let windowHalfY = window.innerHeight;
 const mode = document.querySelector('.div-mode')
+let titles = document.querySelectorAll('#titles')
+
+// Changer chaque lettre du titre en span
+titles.forEach(title =>{
+    title.innerHTML = title.innerText
+    .split('')
+    .map((letter, idx) => `<span style="transition-delay: ${idx * 50}ms">${letter}</span>`)
+    .join('')
+})
 
 // Dark mode / Light mode
 mode.addEventListener('click', (e) =>{
   const html= document.querySelector('html')
   const img = document.querySelector('.div-mode img');
   let attr = "./assets/moon.svg"
-  console.log(img);
   if(html.classList.contains('dark')){
       html.classList.remove('dark')
       attr = "./assets/moon.svg"

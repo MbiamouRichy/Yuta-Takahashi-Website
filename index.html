@@ -83,7 +83,7 @@
     <div class="w-full h-1/2 absolute top-1/4 md:top-1/3 left-0 flex flex-col items-center justify-around">
         <div class="flex w-10/12 flex-row items-center justify-center">
             <div class="slide">
-                <h1 class="text-3xl md:text-6xl xl:text-9xl mix-blend-difference font-bold">Shoe-Three-JS</h1>
+                <h1 id="titles" class="text-3xl md:text-6xl xl:text-9xl mix-blend-difference font-bold">Shoe-Three-JS</h1>
                 <div class="slider-hr w-full lg:w-5/12 h-0.5"></div>
                 <p class="text-base font-light md:text-lg lg:text-2xl">Corporate site</p>
             </div>
@@ -93,16 +93,16 @@
         <div class="flex w-10/12 gap-5 mt-5 lg:items-start items-end flex-col-reverse lg:flex-row">
             <!-- LEFT -->
             <div id="btn-left"
-                class="rounded-rond transition-all duration-300 hover:scale-95 p-3 w-10 h-10 md:w-12 md:h-12 bg-white flex items-center justify-center">
-                <svg width="40" height="10" viewBox="0 0 40 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                class="rounded-rond transition-all duration-300 hover:scale-95 p-3 w-10 h-10 md:w-12 md:h-12 bg-white flex items-center justify-center relative before:w-0 before:h-full before:rounded-rond before:absolute before:bottom-0 before:left-0 hover:before:w-full  before:transition-all before:-z-10 before:duration-300">
+                <svg class="nav-slide" width="40" height="10" viewBox="0 0 40 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <line y1="8.99976" x2="40" y2="8.99976" stroke="black" stroke-width="2" />
                     <line x1="11.0811" y1="0.794733" x2="0.606932" y2="8.79414" stroke="black" stroke-width="2" />
                 </svg>
             </div>
             <!-- RIGHT -->
             <div id="btn-right"
-                class="rounded-rond transition-all duration-300 hover:scale-95 p-3 w-10 h-10 md:w-12 md:h-12 bg-white flex items-center justify-center">
-                <svg width="41" height="10" viewBox="0 0 41 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                class="rounded-rond transition-all duration-300 hover:scale-95 p-3 w-10 h-10 md:w-12 md:h-12 bg-white flex items-center justify-center relative before:w-0 before:h-full before:rounded-rond before:absolute before:bottom-0 before:left-0 hover:before:w-full before:transition-all before:-z-10 before:duration-300">
+                <svg class="nav-slide" width="41" height="10" viewBox="0 0 41 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <line y1="9" x2="40" y2="9" stroke="black" stroke-width="2" />
                     <line x1="39.8667" y1="8.7947" x2="29.393" y2="0.794698" stroke="black" stroke-width="2" />
                 </svg>
@@ -132,26 +132,17 @@
         </div>
         <div class="trait"></div>
         <div class="flex flex-row items-center justify-center">
-            <button>
+            <button class="view-website">
                 <p class="sm:text-sm md:text-lg">View Website</p>
-                <svg width="42" height="41" viewBox="0 0 42 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <mask class="change" id="path-1-inside-1_99_27" fill="white">
-                        <path d="M6 0H42V36H6V0Z" />
-                    </mask>
-                    <path class="change"
-                        d="M6 0V-5H3V0H6ZM42 0H45V-5H42V0ZM42 36V39H45V36H42ZM6 36H3V39H6V36ZM6 5H42V-5H6V5ZM39 0V36H45V0H39ZM42 33H6V39H42V33ZM9 36V0H3V36H9Z"
-                        fill="white" mask="url(#path-1-inside-1_99_27)" />
-                    <path class="change"
-                        d="M6 0V-5H3V0H6ZM42 0H45V-5H42V0ZM42 36V39H45V36H42ZM6 36H3V39H6V36ZM6 5H42V-5H6V5ZM39 0V36H45V0H39ZM42 33H6V39H42V33ZM9 36V0H3V36H9Z"
-                        fill="white" mask="url(#path-1-inside-1_99_27)" />
-                    <mask class="change" id="path-3-inside-2_99_27" fill="white">
-                        <path d="M0 9H34V41H0V9Z" />
-                    </mask>
-                    <path class="change" d="M0 41H-3V44H0V41ZM34 38H0V44H34V38ZM3 41V9H-3V41H3Z" fill="white"
-                        mask="url(#path-3-inside-2_99_27)" />
-                    <path class="change" d="M0 41H-3V44H0V41ZM34 38H0V44H34V38ZM3 41V9H-3V41H3Z" fill="white"
-                        mask="url(#path-3-inside-2_99_27)" />
+                <svg width="26" height="28" viewBox="0 0 26 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="0.5" y1="7" x2="0.5" y2="28" stroke="white"/>
+                    <line x1="4.5" y1="3" x2="4.5" y2="24" stroke="white"/>
+                    <line x1="25.5" y1="3" x2="25.5" y2="24" stroke="white"/>
+                    <line y1="27.5" x2="21" y2="27.5" stroke="white"/>
+                    <line x1="4" y1="23.5" x2="25" y2="23.5" stroke="white"/>
+                    <line x1="4" y1="1.5" x2="26" y2="1.5" stroke="white" stroke-width="3"/>
                 </svg>
+                    
             </button>
         </div>
     </div>

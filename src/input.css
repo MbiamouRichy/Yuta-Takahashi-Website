@@ -45,10 +45,28 @@ body{
 .slide{
     @apply w-full flex flex-col items-center justify-between md:items-start md:gap-3;
 }
-#btn-left, #btn-right{
-    box-shadow: 0 0 8px var(--color2);
+.titles span {
+    display: inline-block;
+    transition: all 0.5s cubic-bezier(0.68, -0.7, 0.7, 1);
 }
 
+/* boutton pour la navigation du slider */
+
+#btn-left, #btn-right{
+    box-shadow: 0 0 8px var(--color2);
+    background-color: var(--color1);
+    overflow: hidden;
+}
+#btn-left::before,#btn-right::before{
+    background-color: var(--color2);
+}
+.nav-slide line{
+    stroke: var(--color2);
+    transition: all 0.3s ease-in-out;
+  }
+#btn-left:hover .nav-slide line, #btn-right:hover .nav-slide line{
+  stroke: var(--color1);
+}
 
 /* le compteur de slide */
 .compteur{
@@ -67,6 +85,7 @@ body{
 .compteur hr{
     @apply w-8 h-0.5;
     transform: rotate(-70deg);
+  background-color: var(--color2);
 }
 
 /* lien copyright */
@@ -90,16 +109,17 @@ body{
     background-color: var(--color1);
 }
 /* boutton view website */
-.pied-page button{
+.view-website{
     @apply py-1 px-2 xl:py-3 md:px-5 flex flex-row items-center justify-center border rounded-3xl md:rounded-full gap-2;
     border-color: var(--color1);
 }
-.pied-page button svg{
+.view-website svg{
     @apply w-3 h-3 md:w-5 md:h-5;
 }
-.pied-page button svg .change{
-    fill: var(--color1);
+.view-website svg line{
+  stroke: var(--color1);
 }
+
 /* Animate */
 .animate{
     animation: translatex 2s linear infinite;
