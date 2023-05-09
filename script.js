@@ -9,16 +9,18 @@ let compteur = document.querySelector(".compteur");
 let production = document.querySelector(".production");
 let view_website = document.querySelector(".view-website")
 let period = document.querySelector(".period");
+let souris = document.querySelector(".souris")
+let survol = document.querySelector(".survol")
 let detail = document.querySelector(".detail");
 let btn_left = document.querySelector("#btn-left");
 let btn_right = document.querySelector("#btn-right");
 let activeSlide = 0;
 let slideEl = [
-  {"title": "Shoe-ThreeJS", "subTitle": "Landing Page", "production": 2023, "period": 4, "link": "https://shoe-threejs.vercel.app/"},
-  {"title": "Partytrick","subTitle": "Landing Page", "production": 2023, "period": 2, "link": "https://partytrick-iota.vercel.app/"},
-  {"title": "Untitle UI", "subTitle": "Login Page", "production": 2023, "period": 4, "link": "https://untitle-ui-login-page.vercel.app/"},
-  {"title": "Grow", "subTitle": "Website", "production": 2023, "period": 3, "link": "https://growly-lovat.vercel.app/"},
-  {"title": "Keycode", "subTitle": "Landing Page", "production": 2023, "period": 5, "link": "https://toptal-keycode.vercel.app/"},
+  {"title": "Shoe-ThreeJS", "subTitle": "Landing Page", "production": 2023, "period": 4,"detail": "https://github.com/MbiamouRichy/Shoe-Threejs", "link": "https://shoe-threejs.vercel.app/"},
+  {"title": "Partytrick","subTitle": "Landing Page", "production": 2023, "period": 2,"detail": "https://github.com/MbiamouRichy/partytrick", "link": "https://partytrick-iota.vercel.app/"},
+  {"title": "Untitle UI", "subTitle": "Login Page", "production": 2023, "period": 4,"detail": "https://github.com/MbiamouRichy/UntitleUI-login-Page", "link": "https://untitle-ui-login-page.vercel.app/"},
+  {"title": "Grow", "subTitle": "Website", "production": 2023, "period": 3,"detail": "https://github.com/MbiamouRichy/Growly", "link": "https://growly-lovat.vercel.app/"},
+  {"title": "Keycode", "subTitle": "Landing Page", "production": 2023, "period": 5,"detail": "https://github.com/MbiamouRichy/Toptal-Keycode", "link": "https://toptal-keycode.vercel.app/"},
 ]
 // slider
 creeSlide()
@@ -81,8 +83,27 @@ function Updatecompteur() {
   period.innerText = (slideEl[activeSlide].period).toString().padStart(2, '0')
   production.innerText = slideEl[activeSlide].production
   view_website.setAttribute('href', slideEl[activeSlide].link)
-  detail.setAttribute('href', slideEl[activeSlide].link)
+  detail.setAttribute('href', slideEl[activeSlide].detail)
 }
+
+// Div qui suit la souris
+document.addEventListener('mousemove', (e) =>{
+  const element = e.target
+  if(element.parentNode.classList.contains("title") || element.parentNode.classList.contains("slide") || element.parentNode.classList.contains("detail") ){
+    souris.style.borderWidth = "0"
+    souris.style.zIndex = "40"
+    souris.innerHTML = survol.innerHTML
+    souris.style.top = `${e.pageY - 40}px`
+    souris.style.left = `${e.pageX - 40}px`
+  }else{
+    souris.innerHTML = " "
+    souris.style.borderWidth = "1px"
+    souris.style.zIndex = "30"
+    souris.style.top = `${e.pageY - 20}px`;
+    souris.style.left = `${e.pageX - 20}px`;
+  
+  }
+})
 
 // Changer chaque lettre du titre en span
 titles.forEach((title) => {

@@ -44,7 +44,7 @@ body{
     @apply w-full lg:w-5/12 h-0.5 animate-y;
 }
 .slide{
-    @apply min-w-full w-full hidden h-full flex-col items-center justify-between md:items-start md:gap-3;
+    @apply z-40 min-w-full w-full hidden h-full flex-col items-center justify-between md:items-start md:gap-3;
 }
 div.active{
     display: flex;
@@ -81,12 +81,21 @@ div.active{
         visibility: visible;
     }
 }
+/* suivre la souris */
+.souris{
+    @apply absolute z-30 border rounded-rond h-10 w-10 hidden lg:block;
+    border-color: var(--color2);
+}
 
 /* Boutton Details */
 .detail{
     border-color: var(--color2);
     box-shadow: 0 0 8px var(--color2);
     background-color: var(--color1);
+    @apply  cursor-pointer p-5 w-24 h-24 border rounded-rond flex flex-col items-center;
+}
+.detail p{
+    @apply text-lg;
 }
 .detail svg line{
     stroke: var(--color2);
@@ -97,6 +106,7 @@ div.active{
     box-shadow: 0 0 8px var(--color2);
     background-color: var(--color1);
     overflow: hidden;
+    z-index: 60;
 }
 #btn-left::before,#btn-right::before{
     background-color: var(--color2);
@@ -160,7 +170,15 @@ div.active{
 .view-website svg line{
   stroke: var(--color1);
 }
-
+.view-website:hover svg line{
+    stroke: var(--color2);
+}
+.view-website:hover {
+    color: var(--color2);
+}
+.view-website::before{
+    background-color: var(--color1);
+}
 /* Animate */
 .scroll-bar-anime{
     background-color: var(--color2);
