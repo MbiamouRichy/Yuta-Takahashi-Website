@@ -755,6 +755,11 @@ video {
   line-height: 1rem;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1118,6 +1123,10 @@ div.active{
 
 /* Animate */
 
+.scroll-bar-anime{
+  background-color: var(--color2);
+}
+
 .animate{
   animation: translatex 2s ease-in-out infinite;
 }
@@ -1263,6 +1272,25 @@ div.active{
 
   .lg\:items-start {
     align-items: flex-start;
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .lg\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .lg\:leading-8 {
+    line-height: 2rem;
   }
 }
 

@@ -162,6 +162,9 @@ div.active{
 }
 
 /* Animate */
+.scroll-bar-anime{
+    background-color: var(--color2);
+}
 .animate{
     animation: translatex 2s ease-in-out infinite;
 }
