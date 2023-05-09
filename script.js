@@ -5,6 +5,41 @@ let windowHalfX = window.innerWidth;
 let windowHalfY = window.innerHeight;
 const mode = document.querySelector('.div-mode')
 let titles = document.querySelectorAll('#titles')
+let slides = document.querySelectorAll(".slide");
+let compteur = document.querySelector(".compteur");
+let btn_left = document.querySelector("#btn-left");
+let btn_right = document.querySelector("#btn-right");
+let activeSlide = 0;
+
+// slider
+btn_left.addEventListener("click", () => {
+  activeSlide++;
+  if (activeSlide > slides.length - 1) {
+    activeSlide = 0;
+  }
+  changeSlide();
+})
+btn_right.addEventListener("click", () => {
+  activeSlide--;
+  if (activeSlide < 0) {
+    activeSlide = slides.length - 1;
+  }
+  changeSlide();
+})
+function changeSlide() {
+  slides.forEach((slide) => slide.classList.remove("active"));
+  slides[activeSlide].className += " active";
+  Updatecompteur()
+}
+// Le compteur de slide
+Updatecompteur()
+function Updatecompteur(){
+  compteur.innerHTML = `
+<p>${activeSlide + 1}</p>
+<hr>
+<p>${slides.length}</p> 
+`
+}
 
 // Changer chaque lettre du titre en span
 titles.forEach(title =>{
@@ -66,7 +101,6 @@ function init() {
 var loader = new THREE.TextureLoader()
 let geometry = new THREE.PlaneGeometry(5, 3, 50, 30);
 const material = new THREE.MeshBasicMaterial({
-  wireframe: true,
   map: loader.load("./assets/cameroun.png")
 });
 var plane = new THREE.Mesh(geometry, material);

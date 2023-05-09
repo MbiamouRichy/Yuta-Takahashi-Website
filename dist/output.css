@@ -782,10 +782,6 @@ video {
   transition-duration: 150ms;
 }
 
-.duration-300 {
-  transition-duration: 300ms;
-}
-
 .duration-500 {
   transition-duration: 500ms;
 }
@@ -837,8 +833,10 @@ body{
 }
 
 .slide {
-  display: flex;
+  display: none;
+  height: 100%;
   width: 100%;
+  min-width: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -851,25 +849,36 @@ body{
   }
 }
 
+div.active{
+  display: flex;
+}
+
 #titles span {
   display: inline-block;
   transition: all 0.5s cubic-bezier(0.68, -0.7, 0.7, 1);
   animation: translatey 0.5s ease-in-out forwards;
+  visibility: hidden;
 }
 
 .animate-y{
   animation: translatey 0.5s ease-in-out forwards;
-  visibility: visible;
+  visibility: hidden;
 }
 
 @keyframes translatey {
-  from{
+  0%{
     visibility: hidden;
     transform: translateY(80px);
   }
 
-  to{
+  30%{
+    visibility: visible;
+    transform: translateY(10px);
+  }
+
+  100%{
     transform: translateY(0);
+    visibility: visible;
   }
 }
 
@@ -1054,7 +1063,7 @@ body{
   }
 
   50%{
-    transform: translateX(-50px);
+    transform: translateX(-40px);
   }
 
   100%{

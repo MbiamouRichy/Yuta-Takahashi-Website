@@ -43,25 +43,35 @@ body{
     background-color: var(--color2);
 }
 .slide{
-    @apply w-full flex flex-col items-center justify-between md:items-start md:gap-3;
+    @apply min-w-full w-full hidden h-full flex-col items-center justify-between md:items-start md:gap-3;
+}
+div.active{
+    display: flex;
 }
 #titles span {
     display: inline-block;
     transition: all 0.5s cubic-bezier(0.68, -0.7, 0.7, 1);
     animation: translatey 0.5s ease-in-out forwards;
+    visibility: hidden;
 
 }
 .animate-y{
     animation: translatey 0.5s ease-in-out forwards;
-    visibility: visible;
+    visibility: hidden;
 }
 @keyframes translatey {
-    from{
+    0%{
         visibility: hidden;
         transform: translateY(80px);
     }
-    to{
+    30%{
+        visibility: visible;
+        transform: translateY(10px);
+
+    }
+    100%{
         transform: translateY(0);
+        visibility: visible;
     }
 }
 
@@ -146,7 +156,7 @@ body{
         transform: translateX(-55px);
     }
     50%{
-        transform: translateX(-50px);
+        transform: translateX(-40px);
     }
     100%{
         transform: translate(80px);
