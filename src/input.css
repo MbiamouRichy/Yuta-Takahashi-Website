@@ -41,6 +41,7 @@ body{
 
 .slider-hr{
     background-color: var(--color2);
+    @apply w-full lg:w-5/12 h-0.5 animate-y;
 }
 .slide{
     @apply min-w-full w-full hidden h-full flex-col items-center justify-between md:items-start md:gap-3;
@@ -48,12 +49,18 @@ body{
 div.active{
     display: flex;
 }
-#titles span {
+.title{
+    @apply text-3xl md:text-6xl xl:text-9xl mix-blend-difference font-bold overflow-hidden;
+}
+.title span {
     display: inline-block;
     transition: all 0.5s cubic-bezier(0.68, -0.7, 0.7, 1);
     animation: translatey 0.5s ease-in-out forwards;
     visibility: hidden;
 
+}
+.subTitle{
+    @apply text-base font-light md:text-lg lg:text-2xl animate-y;
 }
 .animate-y{
     animation: translatey 0.5s ease-in-out forwards;
@@ -75,7 +82,15 @@ div.active{
     }
 }
 
-
+/* Boutton Details */
+.detail{
+    border-color: var(--color2);
+    box-shadow: 0 0 8px var(--color2);
+    background-color: var(--color1);
+}
+.detail svg line{
+    stroke: var(--color2);
+}
 /* boutton pour la navigation du slider */
 
 #btn-left, #btn-right{

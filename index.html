@@ -9,7 +9,7 @@
     <meta name="author" content="Mbiamou Richy">
     <link rel="stylesheet" href="./dist/output.css">
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
-    <title>Mbiamou Porfolio | Porfolio</title>
+    <title>Mbiamou Richy | Porfolio</title>
 </head>
 
 <body class="overflow-hidden h-screen w-screen font-sans">
@@ -81,63 +81,48 @@
     </div>
     <!-- Le slider -->
     <div class="w-full h-1/2 absolute top-1/4 md:top-1/3 left-0 flex flex-col items-center justify-around">
-        <div class="flex w-10/12 flex-row items-center justify-center">
-            <div class="slide active">
-                <h1 id="titles" class="text-3xl md:text-6xl xl:text-9xl mix-blend-difference font-bold overflow-hidden">Shoe-Three-JS</h1>
-                <div class="slider-hr w-full lg:w-5/12 h-0.5 animate-y"></div>
-                <p class="text-base font-light md:text-lg lg:text-2xl animate-y">Landing Page</p>
-                 <!-- production et period -->
-                <p class="p_slide hidden">2023</p>
-                <p class="period_slide hidden">04</p>
-            </div>
-
-            <div class="slide">
-                <h1 id="titles" class="text-3xl md:text-6xl xl:text-9xl mix-blend-difference font-bold overflow-hidden">Untitle UI</h1>
-                <div class="slider-hr w-full lg:w-5/12 h-0.5 animate-y"></div>
-                <p class="text-base font-light md:text-lg lg:text-2xl animate-y">Landing Page</p>
-                  <!-- production et period -->
-                <p class="p_slide hidden">2023</p>
-                <p class="period_slide hidden">04</p>
-            </div>
-
-            <div class="slide">
-                <h1 id="titles" class="text-3xl md:text-6xl xl:text-9xl mix-blend-difference font-bold overflow-hidden">Partytrick</h1>
-                <div class="slider-hr w-full lg:w-5/12 h-0.5 animate-y"></div>
-                <p class="text-base font-light md:text-lg lg:text-2xl animate-y">Website</p>
-                  <!-- production et period -->
-                <p class="p_slide hidden">2023</p>
-                <p class="period_slide hidden">03</p>
-            </div>
-
-            <div class="slide">
-                <h1 id="titles" class="text-3xl md:text-6xl xl:text-9xl mix-blend-difference font-bold overflow-hidden">Grow</h1>
-                <div class="slider-hr w-full lg:w-5/12 h-0.5 animate-y"></div>
-                <p class="text-base font-light md:text-lg lg:text-2xl animate-y">Website</p>
-                  <!-- production et period -->
-                <p class="p_slide hidden">2023</p>
-                <p class="period_slide hidden">03</p>
-            </div>
+        <div class="slides flex w-10/12 flex-row items-center justify-center">
+            <!-- <div class="slide">
+                <h1 class="title">
+                    Partytrick</h1>
+                <div class="slider-hr"></div>
+                <p class="subTitle">Website</p>
+            </div> -->
         </div>
 
         <!-- navigation du slider -->
-        <div class="flex w-10/12 gap-5 mt-5 lg:items-start items-end flex-col-reverse lg:flex-row">
-            <!-- LEFT -->
-            <div id="btn-left"
-                class="rounded-rond transition-all hover:scale-95 p-3 w-10 h-10 md:w-12 md:h-12 bg-white flex items-center justify-center relative before:w-0 before:h-full before:rounded-rond before:absolute before:bottom-0 before:left-0 hover:before:w-full  before:transition-all before:-z-10 before:duration-300">
-                <svg class="nav-slide" width="40" height="10" viewBox="0 0 40 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line y1="8.99976" x2="40" y2="8.99976" stroke="black" stroke-width="2" />
-                    <line x1="11.0811" y1="0.794733" x2="0.606932" y2="8.79414" stroke="black" stroke-width="2" />
-                </svg>
+        <div class="w-10/12 flex flex-row justify-between items-center">
+            <a class="detail lg:hidden p-5 w-24 h-24 border rounded-rond flex flex-col items-center" href="#">
+                    <p class="text-lg">Detail</p>
+                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="44.8333" x2="44.8333" y2="100" stroke="white" stroke-width="5"/>
+                        <line y1="48.5" x2="100" y2="48.5" stroke="white" stroke-width="5"/>
+                    </svg>
+            </a>
+
+            <div class="flex gap-5 mt-5 lg:items-start items-end flex-col-reverse lg:flex-row">
+                <!-- LEFT -->
+                <div id="btn-left"
+                    class="rounded-rond transition-all hover:scale-95 p-3 w-10 h-10 md:w-12 md:h-12 bg-white flex items-center justify-center relative before:w-0 before:h-full before:rounded-rond before:absolute before:bottom-0 before:left-0 hover:before:w-full  before:transition-all before:-z-10 before:duration-300">
+                    <svg class="nav-slide" width="40" height="10" viewBox="0 0 40 10" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <line y1="8.99976" x2="40" y2="8.99976" stroke="black" stroke-width="2" />
+                        <line x1="11.0811" y1="0.794733" x2="0.606932" y2="8.79414" stroke="black" stroke-width="2" />
+                    </svg>
+                </div>
+                <!-- RIGHT -->
+                <div id="btn-right"
+                    class="rounded-rond transition-all hover:scale-95 p-3 w-10 h-10 md:w-12 md:h-12 bg-white flex items-center justify-center relative before:w-0 before:h-full before:rounded-rond before:absolute before:bottom-0 before:left-0 hover:before:w-full before:transition-all before:-z-10 before:duration-300">
+                    <svg class="nav-slide" width="41" height="10" viewBox="0 0 41 10" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <line y1="9" x2="40" y2="9" stroke="black" stroke-width="2" />
+                        <line x1="39.8667" y1="8.7947" x2="29.393" y2="0.794698" stroke="black" stroke-width="2" />
+                    </svg>
+                </div>
             </div>
-            <!-- RIGHT -->
-            <div id="btn-right"
-                class="rounded-rond transition-all hover:scale-95 p-3 w-10 h-10 md:w-12 md:h-12 bg-white flex items-center justify-center relative before:w-0 before:h-full before:rounded-rond before:absolute before:bottom-0 before:left-0 hover:before:w-full before:transition-all before:-z-10 before:duration-300">
-                <svg class="nav-slide" width="41" height="10" viewBox="0 0 41 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line y1="9" x2="40" y2="9" stroke="black" stroke-width="2" />
-                    <line x1="39.8667" y1="8.7947" x2="29.393" y2="0.794698" stroke="black" stroke-width="2" />
-                </svg>
-            </div>
+
         </div>
+
 
     </div>
 
@@ -158,41 +143,49 @@
         </div>
         <div class="trait"></div>
         <div class="flex flex-row items-center justify-center">
-            <button class="view-website">
+            <a class="view-website" href="#">
                 <p class="sm:text-sm md:text-lg">View Website</p>
-                <svg width="26" height="28" viewBox="0 0 26 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="0.5" y1="7" x2="0.5" y2="28" stroke="white"/>
-                    <line x1="4.5" y1="3" x2="4.5" y2="24" stroke="white"/>
-                    <line x1="25.5" y1="3" x2="25.5" y2="24" stroke="white"/>
-                    <line y1="27.5" x2="21" y2="27.5" stroke="white"/>
-                    <line x1="4" y1="23.5" x2="25" y2="23.5" stroke="white"/>
-                    <line x1="4" y1="1.5" x2="26" y2="1.5" stroke="white" stroke-width="3"/>
+                <svg width="30" height="32" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1.5" y1="11" x2="1.5" y2="32" stroke="white" stroke-width="3" />
+                    <line x1="7.5" y1="5" x2="7.5" y2="26" stroke="white" stroke-width="3" />
+                    <line x1="28.5" y1="5" x2="28.5" y2="26" stroke="white" stroke-width="3" />
+                    <line x1="2" y1="30.5" x2="23" y2="30.5" stroke="white" stroke-width="3" />
+                    <line x1="6" y1="24.5" x2="27" y2="24.5" stroke="white" stroke-width="3" />
+                    <line x1="6" y1="2.5" x2="30" y2="2.5" stroke="white" stroke-width="5" />
                 </svg>
-            </button>
+
+            </a>
         </div>
     </div>
 
     <!-- indicateur de scroll et logo de twitter -->
     <div class="absolute bottom-1/4 -left-4 flex-row items-center gap-2 rotate-90 hidden lg:flex">
-            <p class="text-lg font-light">SCROLL</p>
-            <div class="h-0.5 bg-gray-500 w-20 overflow-hidden">
-                <div class="w-2/3 slider-hr h-full transition-all duration-500 animate"></div>
-            </div>
+        <p class="text-lg font-light">SCROLL</p>
+        <div class="h-0.5 bg-gray-500 w-20 overflow-hidden">
+            <div class="w-2/3 slider-hr h-full transition-all duration-500 animate"></div>
+        </div>
     </div>
 
-        <!-- logo de twitter -->
+    <!-- logo de twitter -->
 
-        <a class="hidden lg:block absolute bottom-14 left-10" href="https://twitter.com/MbiamouRichy" aria-label="Compte twitter de Mbiamou Richy">
-            <svg class="svg-fill w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
-        </a>
-    
+    <a class="hidden lg:block absolute bottom-14 left-10" href="https://twitter.com/MbiamouRichy"
+        aria-label="Compte twitter de Mbiamou Richy">
+        <svg class="svg-fill w-7 h-7" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+        </svg>
+    </a>
+
 
     <!-- Copyright -->
     <div class="hidden lg:block absolute top-1/2 -right-28 xl:-right-32 rotate-90">
-        <p class="text-xs xl:text-sm font-light">&copy; 2023 Yuta Takahashi | Coded by <a class="lien-copyright font-semibold relative before:w-0 before:h-0.5 before:absolute before:bottom-0 before:left-0 hover:before:w-full before:transition-all before:duration-300" href="http://bento.me/mbiamourichy-">Mbiamou Richy</a></p>
+        <p class="text-xs xl:text-sm font-light">&copy; 2023 Yuta Takahashi | Coded by <a
+                class="lien-copyright font-semibold relative before:w-0 before:h-0.5 before:absolute before:bottom-0 before:left-0 hover:before:w-full before:transition-all before:duration-300"
+                href="http://bento.me/mbiamourichy-">Mbiamou Richy</a></p>
     </div>
 
-    
+
     <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
 
     <script type="importmap">

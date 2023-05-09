@@ -1,21 +1,49 @@
 import * as THREE from "three";
-let container, camera, scene, renderer;
+let container, camera, scene, renderer, titles, slides;
 
 let windowHalfX = window.innerWidth;
 let windowHalfY = window.innerHeight;
 const mode = document.querySelector(".div-mode");
-let titles = document.querySelectorAll("#titles");
-let slides = document.querySelectorAll(".slide");
+let slider = document.querySelector(".slides");
 let compteur = document.querySelector(".compteur");
 let production = document.querySelector(".production");
+let view_website = document.querySelector(".view-website")
 let period = document.querySelector(".period");
-let period_slide = document.querySelectorAll(".period_slide");
-let p_slide = document.querySelectorAll(".p_slide");
+let detail = document.querySelector(".detail");
 let btn_left = document.querySelector("#btn-left");
 let btn_right = document.querySelector("#btn-right");
 let activeSlide = 0;
-
+let slideEl = [
+  {"title": "Shoe-ThreeJS", "subTitle": "Landing Page", "production": 2023, "period": 4, "link": "https://shoe-threejs.vercel.app/"},
+  {"title": "Partytrick","subTitle": "Landing Page", "production": 2023, "period": 2, "link": "https://partytrick-iota.vercel.app/"},
+  {"title": "Untitle UI", "subTitle": "Login Page", "production": 2023, "period": 4, "link": "https://untitle-ui-login-page.vercel.app/"},
+  {"title": "Grow", "subTitle": "Website", "production": 2023, "period": 3, "link": "https://growly-lovat.vercel.app/"},
+  {"title": "Keycode", "subTitle": "Landing Page", "production": 2023, "period": 5, "link": "https://toptal-keycode.vercel.app/"},
+]
 // slider
+creeSlide()
+function creeSlide() {
+  slideEl.forEach((slide, idx) =>{
+  const slideChild = document.createElement('div')
+  slideChild.className = `${idx == 0 ? "slide active": "slide"}`
+  const h1 = document.createElement('h1')
+  h1.className = 'title'
+  h1.innerText = `${slide.title}`
+  slideChild.appendChild(h1)
+  const div_hr = document.createElement('div')
+  div_hr.className = 'slider-hr';
+  slideChild.appendChild(div_hr)
+  const p = document.createElement('p')
+  p.className = 'subTitle'
+  p.innerText = `${slide.subTitle}`
+  slideChild.appendChild(p)
+  slider.appendChild(slideChild)
+  })
+
+  titles = document.querySelectorAll(".title");
+  slides = document.querySelectorAll(".slide");
+}
+// Navigation du slide
 btn_left.addEventListener("click", () => {
   activeSlide++;
   if (activeSlide > slides.length - 1) {
@@ -50,8 +78,10 @@ function Updatecompteur() {
     <p>${compteLength}</p> 
   `;
 
-  period.innerText = period_slide[activeSlide].innerText
-  production.innerText = p_slide[activeSlide].innerText
+  period.innerText = (slideEl[activeSlide].period).toString().padStart(2, '0')
+  production.innerText = slideEl[activeSlide].production
+  view_website.setAttribute('href', slideEl[activeSlide].link)
+  detail.setAttribute('href', slideEl[activeSlide].link)
 }
 
 // Changer chaque lettre du titre en span
