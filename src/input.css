@@ -9,6 +9,8 @@
     --color1: #fff;
     --color2: #111;
 }
+/* light mode / Dark mode */
+
 html{
     transition: all 0.5s ease-in-out;
 }
@@ -21,6 +23,14 @@ body{
     color: var(--color2);
 }
 
+/* Loader */
+.load_opacity {
+    z-index: 100;
+    color: #fff;
+}
+.load_opacity svg path{
+    fill: #fff;
+}
 /* ligne du background */
 
 .svg-fill, .svg-fill path{

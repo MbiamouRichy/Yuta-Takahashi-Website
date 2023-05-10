@@ -11,6 +11,11 @@ let view_website = document.querySelector(".view-website")
 let period = document.querySelector(".period");
 let souris = document.querySelector(".souris")
 let survol = document.querySelector(".survol")
+let load = document.querySelector(".load")
+let load_div = document.querySelector(".load_div")
+let count = 0
+let load_opacity = document.querySelector(".load_opacity")
+let load_svg = document.querySelector(".load_opacity svg")
 let detail = document.querySelector(".detail");
 let btn_left = document.querySelector("#btn-left");
 let btn_right = document.querySelector("#btn-right");
@@ -182,7 +187,6 @@ function onWindowResize() {
 
   renderer.setSize(window.innerWidth, window.innerHeight);
 }
-
 function animate() {
   if (plane) {
     // Adaptation de l'objet en fonction de l'ecran
@@ -221,7 +225,21 @@ function animate() {
   requestAnimationFrame(animate);
   render();
 }
-
 function render() {
   renderer.render(scene, camera);
+}
+
+let set = setInterval(() =>{
+  count++
+  load.innerText = `${count.toString().padStart(3, '0')}`
+  load_div.style.opacity = scale(count, 0, 100, 1, 0)
+  load_svg.style.opacity = scale(count, 0, 100, 0, 1)
+  if(count > 99){
+  clearInterval(set)
+  load_opacity.style.display = "none"
+  }
+}, 1)
+
+const scale = (num, in_min, in_max, out_min, out_max) =>{
+  return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
 }
