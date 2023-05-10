@@ -564,6 +564,14 @@ video {
   top: 25%;
 }
 
+.-right-28 {
+  right: -7rem;
+}
+
+.-right-2 {
+  right: -0.5rem;
+}
+
 .-z-50 {
   z-index: -50;
 }
@@ -1386,6 +1394,10 @@ div.active{
 }
 
 @media (min-width: 1280px) {
+  .xl\:-right-28 {
+    right: -7rem;
+  }
+
   .xl\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
