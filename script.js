@@ -229,6 +229,7 @@ function render() {
   renderer.render(scene, camera);
 }
 
+// Loader
 let set = setInterval(() =>{
   count++
   load.innerText = `${count.toString().padStart(3, '0')}`
