@@ -864,7 +864,6 @@ div.active{
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 700;
-  mix-blend-mode: difference;
 }
 
 @media (min-width: 768px) {

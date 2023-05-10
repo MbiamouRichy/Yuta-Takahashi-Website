@@ -50,7 +50,7 @@ div.active{
     display: flex;
 }
 .title{
-    @apply text-3xl md:text-6xl xl:text-9xl mix-blend-difference font-bold overflow-hidden;
+    @apply text-3xl md:text-6xl xl:text-9xl font-bold overflow-hidden;
 }
 .title span {
     display: inline-block;
