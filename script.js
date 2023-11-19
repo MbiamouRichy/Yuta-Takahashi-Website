@@ -232,7 +232,7 @@ function render() {
 // Loader
 let set = setInterval(() =>{
   count++
-  load.innerText = `${count.toString().padStart(3, '0')}`
+  load.innerText = `${count.toString().padStart(2, '0')}`
   load_div.style.opacity = scale(count, 0, 100, 1, 0)
   load_svg.style.opacity = scale(count, 0, 100, 0, 1)
   if(count > 99){
