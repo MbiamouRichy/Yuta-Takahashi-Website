@@ -65,6 +65,35 @@ btn_right.addEventListener("click", () => {
   }
   changeSlide();
 });
+
+document.addEventListener('mousewheel',  (event) => {
+  // Récupérons la valeur de la rotation de la souris
+  const delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
+  // Déterminons la direction de la rotation
+  const direction = (delta > 0) ? 'avancer' : 'reculer';
+
+  if (direction === 'avancer') {
+     activeSlide++;
+    if (activeSlide > slides.length - 1) {
+      activeSlide = 0;
+
+    }
+    changeSlide();
+  } else if (direction === 'reculer') {
+     activeSlide--;
+  if (activeSlide < 0) {
+    activeSlide = slides.length - 1;
+
+  }
+  changeSlide();
+  }
+
+  // Empêchons le comportement par défaut de la roulette de la souris
+  event.preventDefault();
+}
+)
+
+
 function changeSlide() {
   slides.forEach((slide) => slide.classList.remove("active"));
   slides[activeSlide].className += " active";
