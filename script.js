@@ -7,45 +7,80 @@ const mode = document.querySelector(".div-mode");
 let slider = document.querySelector(".slides");
 let compteur = document.querySelector(".compteur");
 let production = document.querySelector(".production");
-let view_website = document.querySelector(".view-website")
+let view_website = document.querySelector(".view-website");
 let period = document.querySelector(".period");
-let souris = document.querySelector(".souris")
-let survol = document.querySelector(".survol")
-let load = document.querySelector(".load")
-let load_div = document.querySelector(".load_div")
-let count = 0
-let load_opacity = document.querySelector(".load_opacity")
-let load_svg = document.querySelector(".load_opacity svg")
+let souris = document.querySelector(".souris");
+let survol = document.querySelector(".survol");
+let load = document.querySelector(".load");
+let load_div = document.querySelector(".load_div");
+let count = 0;
+let load_opacity = document.querySelector(".load_opacity");
+let load_svg = document.querySelector(".load_opacity svg");
 let detail = document.querySelector(".detail");
 let btn_left = document.querySelector("#btn-left");
 let btn_right = document.querySelector("#btn-right");
 let activeSlide = 0;
 let slideEl = [
-  {"title": "Shoe-ThreeJS", "subTitle": "Landing Page", "production": 2023, "period": 4,"detail": "https://github.com/MbiamouRichy/Shoe-Threejs", "link": "https://shoe-threejs.vercel.app/"},
-  {"title": "Partytrick","subTitle": "Landing Page", "production": 2023, "period": 2,"detail": "https://github.com/MbiamouRichy/partytrick", "link": "https://partytrick-iota.vercel.app/"},
-  {"title": "Untitle UI", "subTitle": "Login Page", "production": 2023, "period": 4,"detail": "https://github.com/MbiamouRichy/UntitleUI-login-Page", "link": "https://untitle-ui-login-page.vercel.app/"},
-  {"title": "Grow", "subTitle": "Website", "production": 2023, "period": 3,"detail": "https://github.com/MbiamouRichy/Growly", "link": "https://growly-lovat.vercel.app/"},
-  {"title": "Keycode", "subTitle": "Landing Page", "production": 2023, "period": 5,"detail": "https://github.com/MbiamouRichy/Toptal-Keycode", "link": "https://toptal-keycode.vercel.app/"},
-]
+  {
+    title: "Shoe-ThreeJS",
+    subTitle: "Landing Page",
+    production: 2023,
+    period: 4,
+    detail: "https://github.com/MbiamouRichy/Shoe-Threejs",
+    link: "https://shoe-threejs.vercel.app/",
+  },
+  {
+    title: "Partytrick",
+    subTitle: "Landing Page",
+    production: 2023,
+    period: 2,
+    detail: "https://github.com/MbiamouRichy/partytrick",
+    link: "https://partytrick-iota.vercel.app/",
+  },
+  {
+    title: "Untitle UI",
+    subTitle: "Login Page",
+    production: 2023,
+    period: 4,
+    detail: "https://github.com/MbiamouRichy/UntitleUI-login-Page",
+    link: "https://untitle-ui-login-page.vercel.app/",
+  },
+  {
+    title: "Grow",
+    subTitle: "Website",
+    production: 2023,
+    period: 3,
+    detail: "https://github.com/MbiamouRichy/Growly",
+    link: "https://growly-lovat.vercel.app/",
+  },
+  {
+    title: "Keycode",
+    subTitle: "Landing Page",
+    production: 2023,
+    period: 5,
+    detail: "https://github.com/MbiamouRichy/Toptal-Keycode",
+    link: "https://toptal-keycode.vercel.app/",
+  },
+];
 // slider
-creeSlide()
+creeSlide();
 function creeSlide() {
-  slideEl.forEach((slide, idx) =>{
-  const slideChild = document.createElement('div')
-  slideChild.className = `${idx == 0 ? "slide active": "slide"}`
-  const h1 = document.createElement('h1')
-  h1.className = 'title'
-  h1.innerText = `${slide.title}`
-  slideChild.appendChild(h1)
-  const div_hr = document.createElement('div')
-  div_hr.className = 'slider-hr';
-  slideChild.appendChild(div_hr)
-  const p = document.createElement('p')
-  p.className = 'subTitle'
-  p.innerText = `${slide.subTitle}`
-  slideChild.appendChild(p)
-  slider.appendChild(slideChild)
-  })
+  slideEl.forEach((slide, idx) => {
+    const slideChild = document.createElement("div");
+    slideChild.className = `${idx == 0 ? "slide active" : "slide"}`;
+    const h1 = document.createElement("h1");
+    h1.className = "title";
+    h1.innerText = `${slide.title}`;
+    slideChild.appendChild(h1);
+    const div_hr = document.createElement("div");
+    div_hr.className = "slider-hr";
+    slideChild.appendChild(div_hr);
+    const p = document.createElement("p");
+    p.className = "subTitle";
+    p.innerText = `${slide.subTitle}`;
+    slideChild.appendChild(p);
+    slider.appendChild(slideChild);
+  });
 
   titles = document.querySelectorAll(".title");
   slides = document.querySelectorAll(".slide");
@@ -66,78 +101,75 @@ btn_right.addEventListener("click", () => {
   changeSlide();
 });
 
-document.addEventListener('mousewheel',  (event) => {
+document.addEventListener("mousewheel", (event) => {
   // Récupérons la valeur de la rotation de la souris
-  const delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
+  const delta = Math.max(-1, Math.min(1, event.wheelDelta || -event.detail));
   // Déterminons la direction de la rotation
-  const direction = (delta > 0) ? 'avancer' : 'reculer';
+  const direction = delta > 0 ? "avancer" : "reculer";
 
-  if (direction === 'avancer') {
-     activeSlide++;
+  if (direction === "avancer") {
+    activeSlide++;
     if (activeSlide > slides.length - 1) {
       activeSlide = 0;
-
     }
     changeSlide();
-  } else if (direction === 'reculer') {
-     activeSlide--;
-  if (activeSlide < 0) {
-    activeSlide = slides.length - 1;
-
-  }
-  changeSlide();
+  } else if (direction === "reculer") {
+    activeSlide--;
+    if (activeSlide < 0) {
+      activeSlide = slides.length - 1;
+    }
+    changeSlide();
   }
 
   // Empêchons le comportement par défaut de la roulette de la souris
   event.preventDefault();
-}
-)
-
+});
 
 function changeSlide() {
   slides.forEach((slide) => slide.classList.remove("active"));
   slides[activeSlide].className += " active";
 
-  Updatecompteur()
+  Updatecompteur();
 }
 // Le compteur de slide
 Updatecompteur();
 function Updatecompteur() {
+  const compte = (activeSlide + 1).toString().padStart(2, "0");
+  const compteLength = slides.length.toString().padStart(2, "0");
 
-  const compte = (activeSlide + 1).toString().padStart(2, '0')
-  const compteLength = (slides.length).toString().padStart(2, '0')
-
-  compteur.innerHTML =
-  `
+  compteur.innerHTML = `
     <p>${compte}</p>
     <hr>
     <p>${compteLength}</p> 
   `;
 
-  period.innerText = (slideEl[activeSlide].period).toString().padStart(2, '0')
-  production.innerText = slideEl[activeSlide].production
-  view_website.setAttribute('href', slideEl[activeSlide].link)
-  detail.setAttribute('href', slideEl[activeSlide].detail)
+  period.innerText = slideEl[activeSlide].period.toString().padStart(2, "0");
+  production.innerText = slideEl[activeSlide].production;
+  view_website.setAttribute("href", slideEl[activeSlide].link);
+  detail.setAttribute("href", slideEl[activeSlide].detail);
 }
 
 // Div qui suit la souris
-document.addEventListener('mousemove', (e) =>{
-  const element = e.target
-  if(element.parentNode.classList.contains("title") || element.parentNode.classList.contains("slide") || element.parentNode.classList.contains("detail") ){
-    souris.style.borderWidth = "0"
-    souris.style.zIndex = "40"
-    souris.innerHTML = survol.innerHTML
-    souris.style.top = `${e.pageY - 40}px`
-    souris.style.left = `${e.pageX - 40}px`
-  }else{
-    souris.innerHTML = " "
-    souris.style.borderWidth = "1px"
-    souris.style.zIndex = "30"
+document.addEventListener("mousemove", (e) => {
+  const element = e.target;
+  if (
+    element.parentNode.classList.contains("title") ||
+    element.parentNode.classList.contains("slide") ||
+    element.parentNode.classList.contains("detail")
+  ) {
+    souris.style.borderWidth = "0";
+    souris.style.zIndex = "40";
+    souris.innerHTML = survol.innerHTML;
+    souris.style.top = `${e.pageY - 40}px`;
+    souris.style.left = `${e.pageX - 40}px`;
+  } else {
+    souris.innerHTML = " ";
+    souris.style.borderWidth = "1px";
+    souris.style.zIndex = "30";
     souris.style.top = `${e.pageY - 20}px`;
     souris.style.left = `${e.pageX - 20}px`;
-  
   }
-})
+});
 
 // Changer chaque lettre du titre en span
 titles.forEach((title) => {
@@ -259,17 +291,17 @@ function render() {
 }
 
 // Loader
-let set = setInterval(() =>{
-  count++
-  load.innerText = `${count.toString().padStart(2, '0')}`
-  load_div.style.opacity = scale(count, 0, 100, 1, 0)
-  load_svg.style.opacity = scale(count, 0, 100, 0, 1)
-  if(count > 99){
-  clearInterval(set)
-  load_opacity.style.display = "none"
+let set = setInterval(() => {
+  count++;
+  load.innerText = `${count.toString().padStart(2, "0")}`;
+  load_div.style.opacity = scale(count, 0, 100, 1, 0);
+  load_svg.style.opacity = scale(count, 0, 100, 0, 1);
+  if (count > 99) {
+    clearInterval(set);
+    load_opacity.style.display = "none";
   }
-}, 1)
+}, 1);
 
-const scale = (num, in_min, in_max, out_min, out_max) =>{
-  return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
-}
+const scale = (num, in_min, in_max, out_min, out_max) => {
+  return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
+};
