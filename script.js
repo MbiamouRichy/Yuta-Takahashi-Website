@@ -38,6 +38,14 @@ let slideEl = [
     link: "https://partytrick-iota.vercel.app/",
   },
   {
+    title: "Burger King",
+    subTitle: "Landing Page",
+    production: 2024,
+    period: 1,
+    detail: "https://github.com/MbiamouRichy/Burger-App",
+    link: "https://burger-app-khaki.vercel.app/",
+  },
+  {
     title: "Untitle UI",
     subTitle: "Login Page",
     production: 2023,
