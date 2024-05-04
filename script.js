@@ -22,52 +22,102 @@ let btn_right = document.querySelector("#btn-right");
 let activeSlide = 0;
 let slideEl = [
   {
-    title: "Shoe-ThreeJS",
-    subTitle: "Landing Page",
-    production: 2023,
+    title: "Global-services",
+    subTitle: "I coded the official website of global services",
+    production: 2024,
+    period: 4,
+    detail: "https://github.com/MbiamouRichy/site_global_services",
+    link: "https://global-services-officiel.vercel.app/",
+  },
+  {
+    title: "Nike-shoes",
+    subTitle: "I make this with reacth three fiber for fun",
+    production: 2024,
     period: 4,
     detail: "https://github.com/MbiamouRichy/Shoe-Threejs",
     link: "https://shoe-threejs.vercel.app/",
   },
   {
-    title: "Partytrick",
-    subTitle: "Landing Page",
-    production: 2023,
-    period: 2,
-    detail: "https://github.com/MbiamouRichy/partytrick",
-    link: "https://partytrick-iota.vercel.app/",
-  },
-  {
-    title: "Burger King",
-    subTitle: "Landing Page",
+    title: "T-shirt-template",
+    subTitle: "I code this with react three fiber",
     production: 2024,
-    period: 1,
-    detail: "https://github.com/MbiamouRichy/Burger-App",
-    link: "https://burger-app-khaki.vercel.app/",
+    period: 4,
+    detail: "https://github.com/MbiamouRichy/r3f-configurator",
+    link: "https://r3fconfigurator.vercel.app/",
   },
   {
-    title: "Untitle UI",
-    subTitle: "Login Page",
+    title: "Use-Memo",
+    subTitle: "I code this to save short text for later",
+    production: 2024,
+    period: 4,
+    detail: "https://github.com/MbiamouRichy/fisrt-react-native-app",
+    link: "https://first-app-next-js-five.vercel.app",
+  },
+
+  {
+    title: "Untitle-UI",
+    subTitle: "I code this login Page for UntitleUI",
     production: 2023,
     period: 4,
     detail: "https://github.com/MbiamouRichy/UntitleUI-login-Page",
     link: "https://untitle-ui-login-page.vercel.app/",
   },
   {
-    title: "Grow",
-    subTitle: "Website",
+    title: "Partytrick",
+    subTitle: "I code the frontend of this website",
     production: 2023,
-    period: 3,
-    detail: "https://github.com/MbiamouRichy/Growly",
-    link: "https://growly-lovat.vercel.app/",
+    period: 2,
+    detail: "https://github.com/MbiamouRichy/partytrick",
+    link: "https://partytrick-iota.vercel.app/",
   },
   {
-    title: "Keycode",
-    subTitle: "Landing Page",
-    production: 2023,
-    period: 5,
-    detail: "https://github.com/MbiamouRichy/Toptal-Keycode",
-    link: "https://toptal-keycode.vercel.app/",
+    title: "Controls-website",
+    subTitle: "I integrated the frontend of this website",
+    production: 2024,
+    period: 1,
+    detail: "https://github.com/MbiamouRichy/control",
+    link: "https://control-nu.vercel.app/",
+  },
+
+  {
+    title: "Devolla",
+    subTitle: "I integrated this from figma",
+    production: 2024,
+    period: 4,
+    detail: "https://github.com/MbiamouRichy/devolla",
+    link: "https://devolla.vercel.app/",
+  },
+  {
+    title: "Burger-King",
+    subTitle: "I integrated this just for fun",
+    production: 2024,
+    period: 1,
+    detail: "https://github.com/MbiamouRichy/Burger-App",
+    link: "https://burger-app-khaki.vercel.app/",
+  },
+  {
+    title: "Fynsec-Website",
+    subTitle: "I remaked the frontend of this website",
+    production: 2024,
+    period: 3,
+    detail: "https://github.com/MbiamouRichy/fynsec_website",
+    link: "https://fynsec-website.vercel.app/",
+  },
+  {
+    title: "Dribbble-login",
+    subTitle: "I remaked this login page from dribbble",
+    production: 2024,
+    period: 2,
+    detail: "https://github.com/MbiamouRichy/Dribbble-login-Page",
+    link: "https://dribbble-login-page.vercel.app/",
+  },
+  {
+    title: "Latos-login",
+    subTitle: "I remaked this login page from Latos",
+    production: 2024,
+    period: 2,
+    detail: "https://github.com/MbiamouRichy/Latos_form",
+    link: "https://latos-form.vercel.app/",
   },
 ];
 // slider
@@ -138,6 +188,7 @@ function changeSlide() {
   slides[activeSlide].className += " active";
 
   Updatecompteur();
+  updateTexture(activeSlide);
 }
 // Le compteur de slide
 Updatecompteur();
@@ -240,12 +291,18 @@ function init() {
   window.addEventListener("resize", onWindowResize);
 }
 var loader = new THREE.TextureLoader();
-let geometry = new THREE.PlaneGeometry(5, 3, 50, 30);
+let geometry = new THREE.PlaneGeometry(8, 4, 50, 30);
 const material = new THREE.MeshBasicMaterial({
-  map: loader.load("./assets/cameroun.png"),
+  map: loader.load(`./assets/websiteImg/image${activeSlide}.png`),
 });
 var plane = new THREE.Mesh(geometry, material);
 scene.add(plane);
+
+function updateTexture(activeSlide) {
+  const texturePath = `./assets/websiteImg/image${activeSlide}.png`;
+  material.map = loader.load(texturePath);
+  material.needsUpdate = true;
+}
 
 function onWindowResize() {
   windowHalfX = window.innerWidth;
