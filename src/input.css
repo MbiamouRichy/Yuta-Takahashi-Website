@@ -61,7 +61,7 @@ body {
 }
 div.active {
   display: flex;
-  text-shadow: 0 0 8px var(--color1);
+  text-shadow: 0 0 5px var(--color1);
 }
 .title {
   @apply text-3xl md:text-6xl xl:text-9xl font-bold overflow-hidden py-5;

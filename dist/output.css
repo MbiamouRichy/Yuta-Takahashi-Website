@@ -568,8 +568,8 @@ video {
   left: -1rem;
 }
 
-.-right-20{
-  right: -5rem;
+.-right-5{
+  right: -1.25rem;
 }
 
 .bottom-1\/4{
@@ -940,7 +940,7 @@ body {
 
 div.active {
   display: flex;
-  text-shadow: 0 0 8px var(--color1);
+  text-shadow: 0 0 5px var(--color1);
 }
 
 .title{
@@ -1430,16 +1430,5 @@ div.active {
 
   .lg\:leading-8{
     line-height: 2rem;
-  }
-}
-
-@media (min-width: 1280px){
-  .xl\:-right-28{
-    right: -7rem;
-  }
-
-  .xl\:text-sm{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
   }
 }
