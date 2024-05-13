@@ -34,8 +34,8 @@ let slideEl = [
     subTitle: "I make this with reacth three fiber for fun",
     production: 2024,
     period: 4,
-    detail: "https://github.com/MbiamouRichy/Shoe-Threejs",
-    link: "https://shoe-threejs.vercel.app/",
+    detail: "https://github.com/MbiamouRichy/r3f-configurator-shoe",
+    link: "https://r3f-configurator-shoe.vercel.app/",
   },
   {
     title: "T-shirt-template",
