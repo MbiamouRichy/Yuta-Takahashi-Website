@@ -23,7 +23,7 @@ let activeSlide = 0;
 let slideEl = [
   {
     title: "Global-services",
-    subTitle: "I coded the official website of global services",
+    subTitle: "I coded the official website of 'global services'",
     production: 2024,
     period: 4,
     detail: "https://github.com/MbiamouRichy/site_global_services",
@@ -31,7 +31,7 @@ let slideEl = [
   },
   {
     title: "Nike-shoes",
-    subTitle: "I make this with reacth three fiber for fun",
+    subTitle: "I make this with react three fiber for fun",
     production: 2024,
     period: 4,
     detail: "https://github.com/MbiamouRichy/r3f-configurator-shoe",
@@ -39,7 +39,7 @@ let slideEl = [
   },
   {
     title: "T-shirt-template",
-    subTitle: "I code this with react three fiber",
+    subTitle: "I code after the r3f training",
     production: 2024,
     period: 4,
     detail: "https://github.com/MbiamouRichy/r3f-configurator",
@@ -56,7 +56,8 @@ let slideEl = [
 
   {
     title: "Untitle-UI",
-    subTitle: "I code this login Page for UntitleUI",
+    subTitle:
+      "I took inspiration from a dribbble template from untitleui to code this.",
     production: 2023,
     period: 4,
     detail: "https://github.com/MbiamouRichy/UntitleUI-login-Page",
@@ -64,7 +65,7 @@ let slideEl = [
   },
   {
     title: "Partytrick",
-    subTitle: "I code the frontend of this website",
+    subTitle: "I redid the frontend of this magnificent website.",
     production: 2023,
     period: 2,
     detail: "https://github.com/MbiamouRichy/partytrick",
