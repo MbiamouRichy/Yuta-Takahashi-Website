@@ -1,7 +1,4 @@
-import { inject } from "@vercel/analytics";
 import * as THREE from "three";
-// Les analytics du site
-inject();
 
 let container, camera, scene, renderer, titles, slides;
 
