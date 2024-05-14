@@ -7,7 +7,7 @@
 /* Style personnalise */
 
 :root {
-  --color1: #fff;
+  --color1: #f8fafc;
   --color2: #111;
 }
 /* light mode / Dark mode */
@@ -19,7 +19,7 @@ html {
 }
 html.dark {
   --color1: #111;
-  --color2: #fff;
+  --color2: #f8fafc;
   background-color: var(--color1);
 }
 body {
@@ -29,10 +29,10 @@ body {
 /* Loader */
 .load_opacity {
   z-index: 100;
-  color: #fff;
+  color: #f8fafc;
 }
 .load_opacity svg path {
-  fill: #fff;
+  fill: #f8fafc;
 }
 /* ligne du background */
 

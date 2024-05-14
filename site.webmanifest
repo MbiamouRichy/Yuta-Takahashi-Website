@@ -1,0 +1,20 @@
+{
+  "name": "Richy Mbiamou - Porfolio",
+  "short_name": "Richy Mbiamou",
+  "description": "These are all the top projects of the frontend developer Richy Mbiamou.",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#f8fafc",
+  "background_color": "#f8fafc",
+  "display": "standalone"
+}

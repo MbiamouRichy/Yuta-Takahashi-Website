@@ -568,8 +568,8 @@ video {
   left: -1rem;
 }
 
-.-right-5{
-  right: -1.25rem;
+.-right-7{
+  right: -1.75rem;
 }
 
 .bottom-1\/4{
@@ -602,14 +602,6 @@ video {
 
 .top-1\/4{
   top: 25%;
-}
-
-.-right-7{
-  right: -1.75rem;
-}
-
-.-right-6{
-  right: -1.5rem;
 }
 
 .-z-50{
@@ -698,10 +690,6 @@ video {
 
 .w-screen{
   width: 100vw;
-}
-
-.w-14{
-  width: 3.5rem;
 }
 
 .-translate-x-1\/2{
@@ -827,28 +815,20 @@ video {
   font-weight: 700;
 }
 
-.font-light{
-  font-weight: 300;
+.font-medium{
+  font-weight: 500;
 }
 
 .font-normal{
   font-weight: 400;
 }
 
-.font-semibold{
-  font-weight: 600;
-}
-
-.font-medium{
-  font-weight: 500;
+.opacity-50{
+  opacity: 0.5;
 }
 
 .opacity-0{
   opacity: 0;
-}
-
-.opacity-50{
-  opacity: 0.5;
 }
 
 .transition-all{
@@ -864,7 +844,7 @@ video {
 /* Style personnalise */
 
 :root {
-  --color1: #fff;
+  --color1: #f8fafc;
   --color2: #111;
 }
 
@@ -880,7 +860,7 @@ html {
 
 html.dark {
   --color1: #111;
-  --color2: #fff;
+  --color2: #f8fafc;
   background-color: var(--color1);
 }
 
@@ -892,11 +872,11 @@ body {
 
 .load_opacity {
   z-index: 100;
-  color: #fff;
+  color: #f8fafc;
 }
 
 .load_opacity svg path {
-  fill: #fff;
+  fill: #f8fafc;
 }
 
 /* ligne du background */

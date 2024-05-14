@@ -1,23 +1,20 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Je suis developpeur frontend et integrateur web"
+      content="These are all the top projects of the frontend developer Richy Mbiamou."
     />
     <meta name="author" content="Richy Mbiamou" />
     <link rel="stylesheet" href="./dist/output.css" />
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lexend+Deca"
-      rel="stylesheet"
-    />
-    <title>Mbiamou Richy - Porfolio</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Richy Mbiamou - projects</title>
   </head>
 
   <body class="overflow-hidden h-screen w-screen">
@@ -126,8 +123,9 @@
         />
       </svg>
     </div>
+
     <!-- Le header -->
-    <div
+    <header
       class="absolute z-50 top-0 left-0 flex flex-row items-center justify-between w-full p-5"
     >
       <div class="flex flex-col items-center justify-center">
@@ -152,111 +150,159 @@
       <div class="div-mode">
         <img class="w-8 h-8" src="./assets/moon.svg" alt="icon" />
       </div>
-    </div>
-    <!-- Le slider -->
-    <div
-      class="w-full h-1/2 absolute top-1/4 md:top-1/3 left-0 flex flex-col items-center justify-around"
-    >
+    </header>
+
+    <main>
+      <!-- Le slider -->
       <div
-        class="slides flex w-10/12 flex-row items-center justify-center"
-      ></div>
-
-      <!-- navigation du slider -->
-      <div class="w-10/12 flex flex-row justify-between items-center">
-        <div class="survol transition-all block lg:hidden">
-          <a class="detail" href="#" target="_blank">
-            <p>GITHUB</p>
-            <svg
-              width="30"
-              height="30"
-              viewBox="0 0 100 100"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <line
-                x1="44.8333"
-                x2="44.8333"
-                y2="100"
-                stroke="white"
-                stroke-width="5"
-              />
-              <line
-                y1="48.5"
-                x2="100"
-                y2="48.5"
-                stroke="white"
-                stroke-width="5"
-              />
-            </svg>
-          </a>
-        </div>
-
+        class="w-full h-1/2 absolute top-1/4 md:top-1/3 left-0 flex flex-col items-center justify-around"
+      >
         <div
-          class="flex z-50 gap-5 lg:items-start items-end flex-col-reverse lg:flex-row"
-        >
-          <!-- LEFT -->
-          <div
-            id="btn-right"
-            class="rounded-rond transition-all hover:scale-95 p-3 w-10 h-10 md:w-12 md:h-12 bg-white flex items-center justify-center relative before:w-0 before:h-full before:rounded-rond before:absolute before:bottom-0 before:left-0 hover:before:w-full before:transition-all before:-z-10 before:duration-300"
-          >
-            <svg
-              class="nav-slide"
-              width="40"
-              height="10"
-              viewBox="0 0 40 10"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <line
-                y1="8.99976"
-                x2="40"
-                y2="8.99976"
-                stroke="black"
-                stroke-width="2"
-              />
-              <line
-                x1="11.0811"
-                y1="0.794733"
-                x2="0.606932"
-                y2="8.79414"
-                stroke="black"
-                stroke-width="2"
-              />
-            </svg>
+          class="slides flex w-10/12 flex-row items-center justify-center"
+        ></div>
+
+        <!-- navigation du slider -->
+        <div class="w-10/12 flex flex-row justify-between items-center">
+          <div class="survol transition-all block lg:hidden">
+            <a class="detail" href="#" target="_blank">
+              <p>GITHUB</p>
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 100 100"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  x1="44.8333"
+                  x2="44.8333"
+                  y2="100"
+                  stroke="white"
+                  stroke-width="5"
+                />
+                <line
+                  y1="48.5"
+                  x2="100"
+                  y2="48.5"
+                  stroke="white"
+                  stroke-width="5"
+                />
+              </svg>
+            </a>
           </div>
-          <!-- RIGHT -->
+
           <div
-            id="btn-left"
-            class="rounded-rond transition-all hover:scale-95 p-3 w-10 h-10 md:w-12 md:h-12 bg-white flex items-center justify-center relative before:w-0 before:h-full before:rounded-rond before:absolute before:bottom-0 before:left-0 hover:before:w-full before:transition-all before:-z-10 before:duration-300"
+            class="flex z-50 gap-5 lg:items-start items-end flex-col-reverse lg:flex-row"
           >
-            <svg
-              class="nav-slide"
-              width="41"
-              height="10"
-              viewBox="0 0 41 10"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+            <!-- LEFT -->
+            <div
+              id="btn-right"
+              class="rounded-rond transition-all hover:scale-95 p-3 w-10 h-10 md:w-12 md:h-12 bg-white flex items-center justify-center relative before:w-0 before:h-full before:rounded-rond before:absolute before:bottom-0 before:left-0 hover:before:w-full before:transition-all before:-z-10 before:duration-300"
             >
-              <line y1="9" x2="40" y2="9" stroke="black" stroke-width="2" />
-              <line
-                x1="39.8667"
-                y1="8.7947"
-                x2="29.393"
-                y2="0.794698"
-                stroke="black"
-                stroke-width="2"
-              />
-            </svg>
+              <svg
+                class="nav-slide"
+                width="40"
+                height="10"
+                viewBox="0 0 40 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  y1="8.99976"
+                  x2="40"
+                  y2="8.99976"
+                  stroke="black"
+                  stroke-width="2"
+                />
+                <line
+                  x1="11.0811"
+                  y1="0.794733"
+                  x2="0.606932"
+                  y2="8.79414"
+                  stroke="black"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <!-- RIGHT -->
+            <div
+              id="btn-left"
+              class="rounded-rond transition-all hover:scale-95 p-3 w-10 h-10 md:w-12 md:h-12 bg-white flex items-center justify-center relative before:w-0 before:h-full before:rounded-rond before:absolute before:bottom-0 before:left-0 hover:before:w-full before:transition-all before:-z-10 before:duration-300"
+            >
+              <svg
+                class="nav-slide"
+                width="41"
+                height="10"
+                viewBox="0 0 41 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line y1="9" x2="40" y2="9" stroke="black" stroke-width="2" />
+                <line
+                  x1="39.8667"
+                  y1="8.7947"
+                  x2="29.393"
+                  y2="0.794698"
+                  stroke="black"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Compteur de slide -->
-    <div class="compteur"></div>
+      <!-- Compteur de slide -->
+      <div class="compteur"></div>
+
+      <!-- indicateur de scroll et logo de twitter -->
+      <div
+        class="absolute z-50 bottom-1/4 -left-4 flex-row items-center gap-2 rotate-90 hidden lg:flex"
+      >
+        <p class="text-lg font-medium">SCROLL</p>
+        <div class="h-0.5 bg-gray-500 w-20 overflow-hidden">
+          <div
+            class="w-2/3 scroll-bar-anime h-full transition-all duration-500 animate"
+          ></div>
+        </div>
+      </div>
+
+      <!-- logo de twitter -->
+
+      <a
+        class="hidden z-50 lg:block absolute bottom-14 left-10"
+        target="_blank"
+        href="https://twitter.com/MbiamouRichy"
+        aria-label="Compte twitter de Mbiamou Richy"
+      >
+        <svg
+          class="svg-fill w-7 h-7"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+        >
+          <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path
+            d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+          />
+        </svg>
+      </a>
+
+      <!-- Copyright -->
+      <div class="hidden z-50 lg:block rotate-90 absolute top-1/2 -right-7">
+        <a
+          class="lien-copyright text-xs sm:text-sm font-medium relative before:w-full before:scale-0 before:h-0.5 before:absolute before:bottom-0 before:left-0 hover:before:scale-100 before:transition-all before:duration-300"
+          href="http://bento.me/mbiamourichy"
+          target="_blank"
+          >&copy; Mbiamou Richy 2024</a
+        >
+      </div>
+
+      <!-- Div souris -->
+      <div class="souris"></div>
+    </main>
 
     <!-- Le pied de page -->
-    <div class="pied-page z-50">
+    <footer class="pied-page z-50">
       <div class="flex flex-row items-center justify-center gap-1">
         <div class="flex flex-col items-center justify-center">
           <p>Production</p>
@@ -297,53 +343,7 @@
           </svg>
         </a>
       </div>
-    </div>
-
-    <!-- indicateur de scroll et logo de twitter -->
-    <div
-      class="absolute z-50 bottom-1/4 -left-4 flex-row items-center gap-2 rotate-90 hidden lg:flex"
-    >
-      <p class="text-lg font-medium">SCROLL</p>
-      <div class="h-0.5 bg-gray-500 w-20 overflow-hidden">
-        <div
-          class="w-2/3 scroll-bar-anime h-full transition-all duration-500 animate"
-        ></div>
-      </div>
-    </div>
-
-    <!-- logo de twitter -->
-
-    <a
-      class="hidden z-50 lg:block absolute bottom-14 left-10"
-      target="_blank"
-      href="https://twitter.com/MbiamouRichy"
-      aria-label="Compte twitter de Mbiamou Richy"
-    >
-      <svg
-        class="svg-fill w-7 h-7"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 512 512"
-      >
-        <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-        <path
-          d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
-        />
-      </svg>
-    </a>
-
-    <!-- Copyright -->
-    <div class="hidden z-50 lg:block rotate-90 absolute top-1/2 -right-7">
-      <a
-        class="lien-copyright text-xs sm:text-sm font-medium relative before:w-full before:scale-0 before:h-0.5 before:absolute before:bottom-0 before:left-0 hover:before:scale-100 before:transition-all before:duration-300"
-        href="http://bento.me/mbiamourichy"
-        target="_blank"
-        >&copy; Mbiamou Richy 2024</a
-      >
-    </div>
-
-    <!-- Div souris -->
-    <div class="souris"></div>
-
+    </footer>
     <script
       async
       src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"

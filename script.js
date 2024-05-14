@@ -275,11 +275,11 @@ function init() {
   camera.position.z = 20;
   // scene
   scene = new THREE.Scene();
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0);
   scene.add(ambientLight);
 
   // Point lumineux dans la scene
-  const pointLight = new THREE.PointLight(0xcccccc, 0.8);
+  const pointLight = new THREE.PointLight(0xcccccc, 0);
   camera.add(pointLight);
   scene.add(camera);
 
@@ -294,13 +294,13 @@ function init() {
 var loader = new THREE.TextureLoader();
 let geometry = new THREE.PlaneGeometry(8, 4, 50, 30);
 const material = new THREE.MeshBasicMaterial({
-  map: loader.load(`./assets/websiteImg/image${activeSlide}.png`),
+  map: loader.load(`./assets/websiteImg/image${activeSlide}.jpg`),
 });
 var plane = new THREE.Mesh(geometry, material);
 scene.add(plane);
 
 function updateTexture(activeSlide) {
-  const texturePath = `./assets/websiteImg/image${activeSlide}.png`;
+  const texturePath = `./assets/websiteImg/image${activeSlide}.jpg`;
   material.map = loader.load(texturePath);
   material.needsUpdate = true;
 }
